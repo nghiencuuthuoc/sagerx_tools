@@ -1,0 +1,18 @@
+sudo apt update && sudo apt install samba
+
+whereis samba
+
+[sagerx]
+    comment = sagerx
+    path = /home/rd/sagerx
+    read only = no
+    browsable = yes
+	
+sudo -H gedit /etc/samba/smb.conf
+
+sudo service smbd restart
+sudo ufw allow samba
+
+sudo smbpasswd -a rd
+
+pass:rd

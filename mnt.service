@@ -1,0 +1,7 @@
+[Unit]
+Description=mnt
+After=network.target
+[Service]
+ExecStart=home/rd/mnt.sh
+[Install]
+WantedBy=default.target
